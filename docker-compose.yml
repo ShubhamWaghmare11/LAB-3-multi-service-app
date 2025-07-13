@@ -1,0 +1,22 @@
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "5000:5000"
+
+  frontend:
+    build: ./frontend
+    depends_on: 
+      - backend
+    ports:
+      - "8080:80"
+
+  logger:
+    build: ./logger
+    depends_on: 
+      - backend
+    volumes:
+      - shared-logs:/logs
+
+volumes:
+  shared-logs:
