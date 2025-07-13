@@ -1,6 +1,6 @@
 services:
   backend:
-    build: ./backend
+    image: shubhamwaghmare11/lab3-backend
     ports:
       - "5000:5000"
 
