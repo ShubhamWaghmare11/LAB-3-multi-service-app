@@ -11,5 +11,5 @@ logging.basicConfig(
 
 
 while True:
-    time.sleep(1)
+    time.sleep(10)
     logging.info("Logger service is active")
